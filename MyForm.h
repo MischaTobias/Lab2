@@ -147,10 +147,7 @@ namespace Lab2MischaTobias1170919 {
 		}
 
 		for (int* i = &c->vtortuga[0]; *i != -1; i++) {
-			if (*i == 1 && c->postortuga == c->posliebre) {
-				car2 += "O";
-			}
-			else if (*i == 1) {
+		    if (*i == 1) {
 				car2 += "T";
 			}
 			else {

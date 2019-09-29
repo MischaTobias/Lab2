@@ -24,12 +24,12 @@ void Carrera::crearCarrera() {
 }
 
 void Carrera::cambiarPosLiebre(int r) {
-	if (1 <= r <= 5) {
+	if ((1 < r || r == 1) && (r < 5 || r == 5)) {
 		vliebre[posliebre - 1] = 0;
 		posliebre += 3;
 		vliebre[posliebre - 1] = 1;
 	}
-	else if (6 <= r <= 7) {
+	else if ((6 < r || r == 6) && (r < 7 || r == 7)) {
 		if (posliebre - 6 > 0) {
 			vliebre[posliebre - 1] = 0;
 			posliebre -= 6;
@@ -41,7 +41,7 @@ void Carrera::cambiarPosLiebre(int r) {
 			vliebre[posliebre - 1] = 1;
 		}
 	}
-	else if (8 <= r <= 10) {
+	else if ((8 < r || r == 8) && (r < 10 || r == 10)) {
 		vliebre[posliebre - 1] = 0;
 		posliebre += 1;
 		vliebre[posliebre - 1] = 1;
@@ -49,7 +49,7 @@ void Carrera::cambiarPosLiebre(int r) {
 }
 
 void Carrera::cambiarPosTortuga(int r) {
-	if (3 <= r <= 4) {
+	if ((3 < r || r == 3) && (r < 4 || r == 4)) {
 		if (postortuga + 9 < 70) {
 			vtortuga[postortuga - 1] = 0;
 			postortuga += 9;
@@ -73,12 +73,12 @@ void Carrera::cambiarPosTortuga(int r) {
 			vtortuga[postortuga - 1] = 1;
 		}
 	}
-	else if (6 <= r <= 8) {
+	else if ((6 < r || r == 6) && (r < 8 || r == 8)) {
 		vtortuga[postortuga - 1] = 0;
 		postortuga += 1;
 		vtortuga[postortuga - 1] = 1;
 	}
-	else if (9 <= r <= 10) {
+	else if ((9 < r || r == 9) && (r < 10 || r == 10)) {
 		if (postortuga - 2 > 0) {
 			vtortuga[postortuga - 1] = 0;
 			postortuga -= 2;
